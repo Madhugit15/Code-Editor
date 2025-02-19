@@ -2,8 +2,8 @@
   margin: 0;
   padding: 0;
 }
-body.tinymce{
- line-height: 0.5 !important;
+body.tinymce {
+  line-height: 0.5 !important;
 }
 .container {
   display: flex;
@@ -16,20 +16,25 @@ body.tinymce{
   width: 100%;
 }
 .editor_menu {
-  padding-top: 40px;
+  margin-top: 40px;
+  width:89%;
+  background-color: ghostwhite;
   margin-left: 70px;
+  border-radius: 10px;
+  padding:15px 5px;
+ 
 }
 .editor_menu a {
-  padding-right: 10px;
+  padding-right: 20px;
   text-decoration: none;
 
   color: blue;
 }
-.editor_menu a:focus{
-    color:whitesmoke;
-    background-color: blue;
-    transition: .3s all linear;
+.editor_menu a:focus {
+  color: whitesmoke;
+  background-color: blue;
+  transition: 0.3s all linear;
 }
 .tox-statusbar {
-    display: none !important;
+  display: none !important;
 }
