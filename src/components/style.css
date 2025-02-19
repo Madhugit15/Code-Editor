@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body.tinymce{
+ line-height: 0.5 !important;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.editor_content {
+  width: 100%;
+}
+.editor_menu {
+  padding-top: 40px;
+  margin-left: 70px;
+}
+.editor_menu a {
+  padding-right: 10px;
+  text-decoration: none;
+
+  color: blue;
+}
+.editor_menu a:focus{
+    color:whitesmoke;
+    background-color: blue;
+    transition: .3s all linear;
+}
+.tox-statusbar {
+    display: none !important;
+}
