@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { Editor } from "@tinymce/tinymce-react";
-import { useState } from "react";
+// import { useState } from "react";
 import './style.css'
 
 const App = () => {
@@ -20,9 +20,9 @@ const App = () => {
       </div>
       <div className="editor_content">
       <div className="editor_menu">
-        <a href="">WORD</a>
-        <a href="">HTML</a>
-        <a href="">PREVIEW</a>
+        <a href="/">WORD</a>
+        <a href="/">HTML</a>
+        <a href="/">PREVIEW</a>
       </div>
       <div style={{ width: "90%", margin: "auto", color: "black" }}>
         <Editor
