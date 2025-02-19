@@ -60,7 +60,7 @@ const App = () => {
             toolbar:
               "undo redo | image | preview | casechange blocks | bold italic backcolor | alignleft aligncenter alignright alignjustify | bullist numlist checklist  indent | removeformat | fontsizeselect | fontfamily",
             font_size_input_default_unit: "px",
-            font_family_formats: "Arial=arial,helvetica,sans-serif",
+            // font_family_formats: "Arial=arial,helvetica,sans-serif",
             font_size_formats:
               "8px 10px 12px 14px 16px 18px 20px 24px 26px 28px 30px 32px 36px",
 
