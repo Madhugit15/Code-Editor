@@ -1,20 +1,24 @@
-import React, { useContext } from 'react'
-import { userContext } from '../App'
+import React, { useContext } from "react";
+import { userContext } from "../App";
 // import { Link } from 'react-router-dom'
 
 function Html() {
-    const {htmlContent}= useContext(userContext)
+  const { htmlContent } = useContext(userContext);
   return (
- 
- <div style={{margin:"70px"}} >
-   <textarea
+    <div style={{marginBottom:"50px",overflowX:"-moz-hidden-unscrollable"}}>
+      <textarea
         value={htmlContent}
-        style={{ width: "100%", height: "500px" }}
+        style={{
+          width: "90%",
+          height: "500px",
+          margin:"0 66px",
+          
+          
+          
+        }}
       />
-   
-   </div>
-  
-  )
+    </div>
+  );
 }
 
-export default Html
+export default Html;
