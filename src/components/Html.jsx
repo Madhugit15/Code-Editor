@@ -6,10 +6,10 @@ function Html() {
     const {htmlContent}= useContext(userContext)
   return (
  
- <div >
+ <div style={{margin:"70px"}} >
    <textarea
         value={htmlContent}
-        style={{ width: "100%", height: "200px" }}
+        style={{ width: "100%", height: "500px" }}
       />
    
    </div>
