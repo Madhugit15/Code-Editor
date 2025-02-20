@@ -47,3 +47,6 @@ body.tinymce {
 .tox-statusbar {
   display: none !important;
 }
+.tox-sidebar-wrap body{
+  line-height: 0.5 !important;
+}

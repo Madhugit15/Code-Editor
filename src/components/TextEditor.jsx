@@ -1,17 +1,19 @@
-import React, { useRef } from "react";
+import React, { useContext, useRef } from "react";
 import { Editor } from "@tinymce/tinymce-react";
+import { Link } from "react-router-dom";
 // import { useState } from "react";
 import "./style.css";
+import { userContext } from "../App";
 
-const App = () => {
+const TextEditor = () => {
+  const { setHtmlContent } = useContext(userContext);
   const editorRef = useRef(null);
-  // const [htmlContent, setHtmlContent] = useState("");
 
-  // const handleEditorChange = () => {
-  //   if (editorRef.current) {
-  //     setHtmlContent(editorRef.current.getContent());
-  //   }
-  // };
+  const handleEditorChange = () => {
+    if (editorRef.current) {
+      setHtmlContent(editorRef.current.getContent());
+    }
+  };
 
   return (
     <div className="container">
@@ -27,7 +29,7 @@ const App = () => {
             </li>
             <li>
               {" "}
-              <a href="/">HTML</a>
+              <Link to={"/HTML"}>HTML</Link>
             </li>
             <li>
               {" "}
@@ -78,8 +80,7 @@ const App = () => {
               // font_family_formats: "Arial=arial,helvetica,sans-serif",
               font_size_formats:
                 "8px 10px 12px 14px 16px 18px 20px 24px 26px 28px 30px 32px 36px",
-              content_css: "/mycontent.css",
-              content_style: "body { line-height : 0.5; color:red; }",
+
               placeholder: "Start typing here...",
               style_formats: [
                 {
@@ -118,17 +119,12 @@ const App = () => {
             body { font-family: 'Roboto', sans-serif; }
           `,
             }}
-            // onEditorChange={handleEditorChange}
+            onEditorChange={handleEditorChange}
           />
-
-          {/* <textarea
-        value={htmlContent}
-        style={{ width: "100%", height: "200px" }}
-      /> */}
         </div>
       </div>
     </div>
   );
 };
 
-export default App;
+export default TextEditor;
