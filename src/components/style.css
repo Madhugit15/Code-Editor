@@ -3,7 +3,11 @@
   padding: 0;
   /* overflow-x: hidden; */
 }
-
+body{
+  position:fixed;
+  left:0;
+  right:0;
+}
 .tox-statusbar {
   display: none !important;
 }
@@ -11,12 +15,18 @@
   border-radius: 0px !important;
   background-color: aliceblue !important;
 }
+iframe{
+  outline: none;
+}
+.tox.tox-tinymce .tox-edit-focus{
+  outline:none !important;
+}
 .container h3 {
   text-align: center;
-  margin: 60px 0;
+  margin: 20px 0;
   font-weight: 400;
   letter-spacing: 2px;
-  font-size: 24px;
+  font-size: 22px;
   color: #9dccf8;
 }
 .menus {

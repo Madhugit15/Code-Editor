@@ -15,8 +15,8 @@ function App() {
           <TopContent/>
           <Routes>
             <Route path="/" element={<TextEditor />} />
-            <Route path="/HTML" element={<Html />} />
-            <Route path="/HTML" element={<Html />} />
+            <Route path="/html" element={< Html />} />
+            {/* <Route path="/HTML" element={< />} /> */}
           </Routes>
         </div>
       </BrowserRouter>

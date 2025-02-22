@@ -8,12 +8,13 @@ function Html() {
     <div style={{marginBottom:"50px",overflowX:"-moz-hidden-unscrollable"}}>
       <textarea
         value={htmlContent}
+
         style={{
           width: "90%",
           height: "500px",
           margin:"0 66px",
           
-          
+          outline:"none"
           
         }}
       />

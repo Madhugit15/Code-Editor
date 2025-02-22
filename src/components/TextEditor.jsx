@@ -5,21 +5,27 @@ import "./style.css";
 import { userContext } from "../App";
 
 const TextEditor = () => {
-  const { setHtmlContent } = useContext(userContext);
+  const { setHtmlContent, htmlContent } = useContext(userContext);
+  // const [content, setContent] = useState(() => {
+  //   return localStorage.getItem("editorContent") || "";
+  // });
+
   const editorRef = useRef(null);
 
-  const handleEditorChange = () => {
-    if (editorRef.current) {
-      setHtmlContent(editorRef.current.getContent());
-    }
-  };
+  const handleEditorChange = (content) => {
+    console.log(content);
 
+    setHtmlContent(content);
+    // setContent(content);
+
+    // localStorage.setItem("editorContent", content);
+  };
   return (
-    <div style={{ width: "90%", margin: " 0 auto 50px auto" }}>
+    <div style={{ width: "90%", margin: " 0 auto 50px auto", outline: "none" }}>
       <Editor
         apiKey="t74lzn7ad6bsx83a6dlc0p7o5m3ujkcepr57yr7gsphxouww"
         onInit={(evt, editor) => (editorRef.current = editor)}
-        initialValue="<p></p>"
+        initialValue={htmlContent}
         init={{
           height: 500,
           menubar: true,
@@ -36,7 +42,6 @@ const TextEditor = () => {
             "link",
             "image",
             "charmap",
-
             "anchor",
             "searchreplace",
             "visualblocks",
@@ -47,19 +52,24 @@ const TextEditor = () => {
             "media",
             "table",
             "preview",
+            "autosave",
           ],
           selector: "textarea", // change this value according to your HTML
-
+          advcode_inline: true,
+          advcode_prettify_getcontent:true,
           line_height_formats:
             "0.2 0.4 0.6 0.8 1 1.2 1.4 1.6 2 2.2 2.4 2.6 3 3.2 3.4 3.6 4",
           toolbar:
-            "undo redo | image | preview | casechange blocks | bold italic backcolor | alignleft aligncenter alignright alignjustify|lineheight | bullist numlist checklist  indent | removeformat | fontsizeselect | fontfamily",
+            "undo redo | image | preview|restoredraft | casechange blocks | bold italic backcolor | alignleft aligncenter alignright alignjustify|lineheight | bullist numlist checklist  indent | removeformat | fontsizeselect | fontfamily",
           font_size_input_default_unit: "px",
           // font_family_formats: "Arial=arial,helvetica,sans-serif",
           font_size_formats:
             "8px 10px 12px 14px 16px 18px 20px 24px 26px 28px 30px 32px 36px",
 
           placeholder: "Start typing here...",
+          autosave_restore_when_empty: true,
+          autosave_retention: "30m",
+          autosave_interval: "3s",
           style_formats: [
             {
               title: "Font Weight",
@@ -98,6 +108,7 @@ const TextEditor = () => {
           `,
         }}
         onEditorChange={handleEditorChange}
+        // value={content}
       />
     </div>
   );
