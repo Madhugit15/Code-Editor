@@ -3,29 +3,18 @@ import { Editor } from "@tinymce/tinymce-react";
 
 import "./style.css";
 import { userContext } from "../App";
-
+//t74lzn7ad6bsx83a6dlc0p7o5m3ujkcepr57yr7gsphxouww
 const TextEditor = () => {
-  const { setHtmlContent, htmlContent } = useContext(userContext);
-  // const [content, setContent] = useState(() => {
-  //   return localStorage.getItem("editorContent") || "";
-  // });
+  const { htmlContent, handleEditorChange } = useContext(userContext);
 
   const editorRef = useRef(null);
 
-  const handleEditorChange = (content) => {
-    console.log(content);
-
-    setHtmlContent(content);
-    // setContent(content);
-
-    // localStorage.setItem("editorContent", content);
-  };
   return (
     <div style={{ width: "90%", margin: " 0 auto 50px auto", outline: "none" }}>
       <Editor
         apiKey="t74lzn7ad6bsx83a6dlc0p7o5m3ujkcepr57yr7gsphxouww"
         onInit={(evt, editor) => (editorRef.current = editor)}
-        initialValue={htmlContent}
+        value={htmlContent}
         init={{
           height: 500,
           menubar: true,
@@ -55,12 +44,12 @@ const TextEditor = () => {
             "autosave",
           ],
           selector: "textarea", // change this value according to your HTML
-          advcode_inline: true,
-          advcode_prettify_getcontent:true,
+          // advcode_inline: true,
+          // advcode_prettify_getcontent:true,
           line_height_formats:
             "0.2 0.4 0.6 0.8 1 1.2 1.4 1.6 2 2.2 2.4 2.6 3 3.2 3.4 3.6 4",
           toolbar:
-            "undo redo | image | preview|restoredraft | casechange blocks | bold italic backcolor | alignleft aligncenter alignright alignjustify|lineheight | bullist numlist checklist  indent | removeformat | fontsizeselect | fontfamily",
+            "undo redo | image | preview |restoredraft| casechange blocks | bold italic backcolor | alignleft aligncenter alignright alignjustify|lineheight | bullist numlist checklist  indent | removeformat | fontsizeselect | fontfamily",
           font_size_input_default_unit: "px",
           // font_family_formats: "Arial=arial,helvetica,sans-serif",
           font_size_formats:
@@ -108,7 +97,6 @@ const TextEditor = () => {
           `,
         }}
         onEditorChange={handleEditorChange}
-        // value={content}
       />
     </div>
   );
