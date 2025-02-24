@@ -14,6 +14,9 @@ function TopContent() {
       navigate(Navigate);
     }
   };
+  const showPreview = () => {
+    editorRef.current.execCommand("mcePreview");
+  };
 
   return (
     <div className="container">
@@ -23,7 +26,7 @@ function TopContent() {
 
         <Link onClick={openSourceCode}>HTML</Link>
 
-        <Link to={"/preview"}>PREVIEW</Link>
+        <Link onClick={showPreview}>PREVIEW</Link>
       </div>
     </div>
   );
