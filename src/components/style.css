@@ -52,3 +52,6 @@ iframe{
 
   transition: 1s all ease;
 }
+.tox-dialog.Show .tox-dialog{
+display: block
+}

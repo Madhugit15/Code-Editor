@@ -1,12 +1,13 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import TextEditor from "./components/TextEditor";
-import { createContext, useState, useEffect } from "react";
+import { createContext, useState, useEffect,useRef } from "react";
 import Html from "./components/Html";
 import TopContent from "./components/TopContent";
 export const userContext = createContext();
 
 function App() {
+  const editorRef= useRef(null)
   const [htmlContent, setHtmlContent] = useState("");
   useEffect(() => {
     const savedContent = localStorage.getItem("htmlContent");
@@ -17,11 +18,12 @@ function App() {
 
   const handleEditorChange = (content) => {
     setHtmlContent(content);
+
     localStorage.setItem("htmlContent", content);
   };
   return (
     <userContext.Provider
-      value={{ htmlContent, setHtmlContent, handleEditorChange }}
+      value={{ htmlContent, setHtmlContent, handleEditorChange,editorRef }}
     >
       <BrowserRouter>
         <div className="App">
