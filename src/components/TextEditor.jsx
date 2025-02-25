@@ -41,14 +41,18 @@ const TextEditor = () => {
             "table",
             "preview",
             "autosave",
+            "wordcount",
+            "autocorrect",
           ],
-
+          autocorrect_autocorrect: true,
+          highlight_on_focus:false,
           advcode_inline: true,
           advcode_prettify_getcontent: true,
+          preview_styles: true,
           line_height_formats:
             "0.2 0.4 0.6 0.8 1 1.2 1.4 1.6 2 2.2 2.4 2.6 3 3.2 3.4 3.6 4",
           toolbar:
-            "undo redo | image | preview |restoredraft| casechange blocks | bold italic backcolor | alignleft aligncenter alignright alignjustify|lineheight | bullist numlist checklist  indent | removeformat | fontsizeselect | fontfamily",
+            "undo redo | image |restoredraft| casechange blocks | bold italic blackcolor | alignleft aligncenter alignright alignjustify| lineheight | bullist numlist checklist  indent | removeformat | fontsizeselect ",
           font_size_input_default_unit: "px",
 
           font_size_formats:

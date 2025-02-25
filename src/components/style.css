@@ -3,23 +3,44 @@
   padding: 0;
   /* overflow-x: hidden; */
 }
-body{
-  position:fixed;
-  left:0;
-  right:0;
+body {
+  position: fixed;
+  left: 0;
+  right: 0;
 }
-.tox-statusbar {
+.tox .tox-statusbar__path,
+.tox-statusbar__branding {
   display: none !important;
 }
+
 .tox-tinymce {
   border-radius: 0px !important;
   background-color: aliceblue !important;
 }
-iframe{
-  outline: none;
+
+.tox-mbtn__select-label:hover {
+  cursor: pointer !important;
 }
-.tox.tox-tinymce .tox-edit-focus{
-  outline:none !important;
+
+.tox :not(svg):not(rect) {
+  color: #2971b5 !important;
+}
+.tox .tox-tbtn svg {
+  fill: #115594 !important;
+  cursor: pointer;
+}
+.tox .tox-button {
+  background-color: #e9eff5 !important;
+}
+.tox .tox-button:hover {
+  background-color: #a3bdda !important;
+  transition: 0.3s all linear;
+}
+.tox .tox-mbtn:hover {
+  cursor: pointer;
+  transition: 0.3s all linear;
+  background-color: rgb(201, 223, 243) !important;
+  color: rgb(16, 16, 183) !important;
 }
 .container h3 {
   text-align: center;
@@ -32,7 +53,7 @@ iframe{
 .menus {
   display: flex;
   justify-content: start;
-  background-color:#e9eff5;
+  background-color: #e9eff5;
   margin: 0 66px;
   /* border-radius: 10px; */
 }
@@ -49,9 +70,5 @@ iframe{
 .menus a:hover {
   color: white;
   background-color: #2e6190;
-
   transition: 1s all ease;
-}
-.tox-dialog.Show .tox-dialog{
-display: block
 }
