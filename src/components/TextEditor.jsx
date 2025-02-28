@@ -9,7 +9,7 @@ const TextEditor = () => {
     useContext(userContext);
 
   return (
-    <div style={{ width: "90%", margin: " 0 auto 50px auto", outline: "none" }}>
+    <div style={{ width: "90%", margin: " 0 auto 50px auto" }}>
       <Editor
         apiKey="t74lzn7ad6bsx83a6dlc0p7o5m3ujkcepr57yr7gsphxouww"
         onInit={(evt, editor) => (editorRef.current = editor)}
@@ -45,14 +45,14 @@ const TextEditor = () => {
             "autocorrect",
           ],
           autocorrect_autocorrect: true,
-          highlight_on_focus:false,
+          highlight_on_focus: false,
           advcode_inline: true,
           advcode_prettify_getcontent: true,
           preview_styles: true,
           line_height_formats:
             "0.2 0.4 0.6 0.8 1 1.2 1.4 1.6 2 2.2 2.4 2.6 3 3.2 3.4 3.6 4",
           toolbar:
-            "undo redo | image |restoredraft| casechange blocks | bold italic blackcolor | alignleft aligncenter alignright alignjustify| lineheight | bullist numlist checklist  indent | removeformat | fontsizeselect ",
+            "undo redo | image |restoredraft| casechange blocks | bold italic blackcolor | alignleft aligncenter alignright alignjustify| lineheight | bullist numlist checklist removeindent indent | removeformat | fontsizeselect ",
           font_size_input_default_unit: "px",
 
           font_size_formats:
@@ -62,6 +62,16 @@ const TextEditor = () => {
           autosave_restore_when_empty: true,
           autosave_retention: "30m",
           autosave_interval: "3s",
+          setup: function (editor) {
+            editor.on("init", function () {
+              editor.getBody().style.lineHeight = "1";
+              let Style = document.createElement("style");
+              Style.type = "text/css";
+              Style.textContent = "img {border-radius:6px;}";
+              editor.getDoc().head.appendChild(Style);
+            });
+          },
+
           style_formats: [
             {
               title: "Font Weight",
@@ -98,9 +108,7 @@ const TextEditor = () => {
             @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
             body { font-family: 'Roboto', sans-serif; },
           
-          img{
-            border-radius:10px;
-        }`,
+         `,
         }}
         onEditorChange={handleEditorChange}
       />

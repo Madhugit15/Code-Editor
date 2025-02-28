@@ -9,7 +9,7 @@ function Html() {
   // const { htmlContent } = useContext(userContext);
   const openSourceCode = () => {
     if (editorRef.current) {
-      editorRef.current.execCommand('mceCodeEditor');
+      editorRef.current.execCommand("mceCodeEditor");
     }
   };
   return (

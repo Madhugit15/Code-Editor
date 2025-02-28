@@ -42,6 +42,17 @@ body {
   background-color: rgb(201, 223, 243) !important;
   color: rgb(16, 16, 183) !important;
 }
+.tox .tox-collection__item:hover {
+  cursor: pointer;
+  transition: 0.3s all linear;
+  background-color: rgb(201, 223, 243) !important;
+}
+
+.tox
+  .tox-collection--list
+  .tox-collection__item--active:not(.tox-collection__item--state-disabled) {
+  background-color: #9dccf8 !important;
+}
 .container h3 {
   text-align: center;
   margin: 20px 0;
