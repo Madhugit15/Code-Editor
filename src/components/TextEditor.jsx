@@ -57,7 +57,8 @@ const TextEditor = () => {
 
           font_size_formats:
             "8px 10px 12px 14px 16px 18px 20px 24px 26px 28px 30px 32px 36px",
-
+          font_family_formats:
+            "Roboto=Roboto, sans-serif; Open Sans=Open Sans, sans-serif; Lato=Lato, sans-serif; Montserrat=Montserrat, sans-serif; Oswald=Oswald, sans-serif; Source Sans Pro=Source Sans Pro, sans-serif; Slabo 27px=Slabo 27px, serif; Raleway=Raleway, sans-serif; PT Sans=PT Sans, sans-serif; Merriweather=Merriweather, serif; Noto Sans=Noto Sans, sans-serif; Ubuntu=Ubuntu, sans-serif; Playfair Display=Playfair Display, serif; Roboto Condensed=Roboto Condensed, sans-serif; Poppins=Poppins, sans-serif; Nunito=Nunito, sans-serif; Titillium Web=Titillium Web, sans-serif; Droid Sans=Droid Sans, sans-serif; Indie Flower=Indie Flower, cursive; Bitter=Bitter, serif; Arimo=Arimo, sans-serif; Cabin=Cabin, sans-serif; Fira Sans=Fira Sans, sans-serif; Inconsolata=Inconsolata, monospace; Josefin Sans=Josefin Sans, sans-serif; Libre Baskerville=Libre Baskerville, serif; Lora=Lora, serif; Muli=Muli, sans-serif; Quicksand=Quicksand, sans-serif; Rubik=Rubik, sans-serif; Work Sans=Work Sans, sans-serif; Zilla Slab=Zilla Slab, serif; Anton=Anton, sans-serif; Archivo Narrow=Archivo Narrow, sans-serif; Asap=Asap, sans-serif; Barlow=Barlow, sans-serif; Bebas Neue=Bebas Neue, sans-serif; Cairo=Cairo, sans-serif; Chivo=Chivo, sans-serif; Comfortaa=Comfortaa, sans-serif; Cormorant Garamond=Cormorant Garamond, serif; Crimson Text=Crimson Text, serif; Exo 2=Exo 2, sans-serif; Hind=Hind, sans-serif; Karla=Karla, sans-serif; Libre Franklin=Libre Franklin, sans-serif; Mukta=Mukta, sans-serif; Overpass=Overpass, sans-serif; PT Serif=PT Serif, serif; Rokkitt=Rokkitt, serif;",
           placeholder: "Start typing here...",
           autosave_restore_when_empty: true,
           autosave_retention: "30m",
