@@ -83,3 +83,12 @@ body {
   background-color: #2e6190;
   transition: 1s all ease;
 }
+.mce-content-body img{
+  border-radius: 6px !important;
+} 
+.tox .tox-textarea img{
+  border-radius: 5px;
+}
+.tox-textarea-wrap img{
+  border-radius: 6px !important;
+}

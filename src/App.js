@@ -2,41 +2,40 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import TextEditor from "./components/TextEditor";
 import { createContext, useState, useEffect, useRef } from "react";
-
 import TopContent from "./components/TopContent";
+import Html from "./components/Html";
+
 export const userContext = createContext();
 
 function App() {
   const editorRef = useRef(null);
-  const [htmlContent, setHtmlContent] = useState("");
-  const [wordColor, setWordColor] = useState(true);
-  const [htmlColor, setHtmlColor] = useState(false);
-  const [previewColor, setPreviewColor] = useState(false);
+  const [Content, setContent] = useState("");
+  const [isHtmlView, setIsHtmlView] = useState(false);
+  const [isWord, setIsWord] = useState(true);
+
   useEffect(() => {
-    const savedContent = localStorage.getItem("htmlContent");
+    const savedContent = localStorage.getItem("Content");
     if (savedContent) {
-      setHtmlContent(savedContent);
+      setContent(savedContent);
     }
-  }, [setHtmlContent]);
+  }, [setContent]);
 
   const handleEditorChange = (content) => {
-    setHtmlContent(content);
-
-    localStorage.setItem("htmlContent", content);
+    setContent(content);
+    localStorage.setItem("Content", content);
   };
+
   return (
     <userContext.Provider
       value={{
-        htmlContent,
-        setHtmlContent,
+        isHtmlView,
+        setIsHtmlView,
         handleEditorChange,
         editorRef,
-        htmlColor,
-        setHtmlColor,
-        wordColor,
-        setWordColor,
-        previewColor,
-        setPreviewColor,
+        Content,
+        setContent,
+        isWord,
+        setIsWord,
       }}
     >
       <BrowserRouter>
@@ -44,6 +43,7 @@ function App() {
           <TopContent />
           <Routes>
             <Route path="/" element={<TextEditor />} />
+            <Route path="/html" element={<Html />} />
           </Routes>
         </div>
       </BrowserRouter>
