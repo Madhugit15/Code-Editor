@@ -36,7 +36,7 @@ const TextEditor = () => {
               "visualblocks",
 
               "fullscreen",
-              "nonbreaking",
+              
               "insertdatetime",
               "media",
               "table",
@@ -46,14 +46,14 @@ const TextEditor = () => {
             ],
 
             highlight_on_focus: false,
-            color_default_background: true,
-            nonbreaking_force_tab: true,
+            
+           
             line_height_formats:
               "0.2 0.4 0.6 0.8 1 1.2 1.4 1.6 2 2.2 2.4 2.6 3 3.2 3.4 3.6 4",
             toolbar:
-              "undo redo|nonbreaking | image |restoredraft| casechange blocks | bold italic blackcolor | alignleft aligncenter alignright alignjustify| lineheight | bullist numlist checklist removeindent indent | removeformat | fontsizeselect ",
+              "undo redo | image |restoredraft| casechange blocks | bold italic blackcolor | alignleft aligncenter alignright alignjustify| lineheight | bullist numlist checklist removeindent indent | removeformat | fontsizeselect ",
             font_size_input_default_unit: "px",
-            nonbreaking_wrap: true,
+            
             font_size_formats:
               "8px 10px 12px 14px 16px 18px 20px 24px 26px 28px 30px 32px 36px",
             font_family_formats:
