@@ -8,6 +8,10 @@ body {
   left: 0;
   right: 0;
 }
+.active {
+   color: white;
+  background-color: #8eb2d4;
+}
 .tox .tox-statusbar__path,
 .tox-statusbar__branding {
   display: none !important;
@@ -71,7 +75,7 @@ body {
 .menus a {
   padding: 15px 25px;
   text-decoration: none;
-  border-radius: 5px;
+
   text-align: center;
   font-size: 18px;
   color: #2971b5;
@@ -83,12 +87,12 @@ body {
   background-color: #2e6190;
   transition: 1s all ease;
 }
-.mce-content-body img{
+.mce-content-body img {
   border-radius: 6px !important;
-} 
-.tox .tox-textarea img{
+}
+.tox .tox-textarea img {
   border-radius: 5px;
 }
-.tox-textarea-wrap img{
+.tox-textarea-wrap img {
   border-radius: 6px !important;
 }

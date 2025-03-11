@@ -19,12 +19,10 @@ const TextEditor = () => {
           onInit={(evt, editor) => (editorRef.current = editor)}
           value={Content}
           init={{
-            height: 500,
+            height: 522,
             menubar: true,
 
             plugins: [
-              "code",
-
               "autolink",
 
               "lists",
@@ -36,24 +34,23 @@ const TextEditor = () => {
               "visualblocks",
 
               "fullscreen",
-              
+
               "insertdatetime",
               "media",
               "table",
-              "preview",
+
               "autosave",
               "wordcount",
             ],
 
             highlight_on_focus: false,
-            
-           
+
             line_height_formats:
               "0.2 0.4 0.6 0.8 1 1.2 1.4 1.6 2 2.2 2.4 2.6 3 3.2 3.4 3.6 4",
             toolbar:
               "undo redo | image |restoredraft| casechange blocks | bold italic blackcolor | alignleft aligncenter alignright alignjustify| lineheight | bullist numlist checklist removeindent indent | removeformat | fontsizeselect ",
             font_size_input_default_unit: "px",
-            
+
             font_size_formats:
               "8px 10px 12px 14px 16px 18px 20px 24px 26px 28px 30px 32px 36px",
             font_family_formats:

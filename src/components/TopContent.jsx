@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./style.css";
 
 import { userContext } from "../App";
@@ -16,24 +16,24 @@ function TopContent() {
     setIsWord(true);
   }
 
-  const showPreview = (e) => {
-    editorRef.current.execCommand("mcePreview");
-  };
+  // const showPreview = (e) => {
+  //   editorRef.current.execCommand("mcePreview");
+  // };
 
   return (
     <div className="container">
       <h3>ONLINE TEXT EDITOR</h3>
       <div className="menu_lists">
         <div className="menus">
-          <Link to="/" onClick={showWord}>
+          <NavLink to="/" onClick={showWord}>
             WORD
-          </Link>
+          </NavLink>
 
-          <Link to="/html" onClick={showHtml}>
+          <NavLink to="/html" onClick={showHtml}>
             HTML
-          </Link>
+          </NavLink>
 
-          <Link onClick={showPreview}>PREVIEW</Link>
+          <NavLink to="/preview">PREVIEW</NavLink>
         </div>
       </div>
     </div>

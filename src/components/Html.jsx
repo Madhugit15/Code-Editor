@@ -10,7 +10,12 @@ function Html() {
           <textarea
             value={Content}
             onChange={(e) => handleEditorChange(e.target.value)}
-            style={{ width: "100%", height: "500px", outline: "none" }}
+            style={{
+              width: "100%",
+              height: "522px",
+              outline: "none",
+              border: "none",
+            }}
           />
         )}
       </div>

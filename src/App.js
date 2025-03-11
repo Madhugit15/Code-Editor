@@ -4,6 +4,7 @@ import TextEditor from "./components/TextEditor";
 import { createContext, useState, useEffect, useRef } from "react";
 import TopContent from "./components/TopContent";
 import Html from "./components/Html";
+import Preview from "./components/Preview";
 
 export const userContext = createContext();
 
@@ -22,6 +23,7 @@ function App() {
 
   const handleEditorChange = (content) => {
     setContent(content);
+    console.log(content)
     localStorage.setItem("Content", content);
   };
 
@@ -44,6 +46,7 @@ function App() {
           <Routes>
             <Route path="/" element={<TextEditor />} />
             <Route path="/html" element={<Html />} />
+            <Route path="/preview" element={<Preview />} />
           </Routes>
         </div>
       </BrowserRouter>
