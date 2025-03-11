@@ -23,7 +23,7 @@ function App() {
 
   const handleEditorChange = (content) => {
     setContent(content);
-    console.log(content)
+
     localStorage.setItem("Content", content);
   };
 

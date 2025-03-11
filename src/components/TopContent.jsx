@@ -5,7 +5,7 @@ import "./style.css";
 import { userContext } from "../App";
 
 function TopContent() {
-  const { editorRef, setIsHtmlView, setIsWord } = useContext(userContext);
+  const { setIsHtmlView, setIsWord } = useContext(userContext);
 
   function showHtml() {
     setIsHtmlView(true);
