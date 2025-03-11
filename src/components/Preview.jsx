@@ -14,6 +14,7 @@ function Preview() {
         backgroundColor: "white",
         padding:"15px",
         fontFamily:"Roboto, sans-serif",
+        overflow:"scroll"
         // lineHeight:"30px"
         
       }}
